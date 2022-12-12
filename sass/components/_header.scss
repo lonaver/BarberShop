@@ -1,0 +1,83 @@
+/* Header */
+.section__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $header-idx;
+
+  width: 100%;
+  /* outline: 2px solid rgb(71, 255, 83); */
+}
+.logo__link {
+  display: inline-block;
+  margin-right: 132px;
+  /* outline: 2px solid tomato; */
+}
+
+.header__logo-img {
+  fill: $color-prime-bacground;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color $anim-slow, backdrop-filter $anim-slow;
+  /* outline: 2px solid rgb(255, 71, 191); */
+}
+.section__header {
+  /* background-color: rgba(25, 28, 38, 0.7); */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(25, 28, 38, 0.7),
+    rgba(25, 28, 38, 0.1) /* rgba(141, 178, 179, 0.7) */
+  );
+  backdrop-filter: blur(3px);
+}
+.header__nav {
+  position: relative;
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
+  margin-left: auto;
+  margin-right: 43px;
+
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: $color-prime-bacground;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+
+    transform: translateX(-50%) scaleX(0.3);
+
+    display: block;
+    width: 95%;
+    height: 4px;
+
+    border-radius: 2px;
+
+    background-color: $color-accent;
+    opacity: 0;
+    transition: transform $anim-fast, opacity $anim-fast;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+}
+.current {
+  color: $color-accent;
+}
+
+.header__btn {
+  animation: heartbeat 5s ease-in-out infinite both;
+}
+/* header */

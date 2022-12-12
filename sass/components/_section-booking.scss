@@ -1,0 +1,91 @@
+/* section__booking dark */
+.section__booking {
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-color: $color-background-dark;
+}
+.container__booking {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1200px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  gap: $indent;
+
+  /* outline: 2px solid rgb(71, 255, 83); */
+}
+.booking__bcgimage {
+  /* for backgrond img */
+  /* width: calc((100% - 30px - var(--indent)) / var(--item-bookinh)); */
+
+  background-image: linear-gradient(to right, $color-hero-bcg, $color-hero-bcg),
+    url("../images/ContactsBCG.png");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 410px) top 50%;
+  /* background-size: cover; */
+}
+
+.item-book {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 0px;
+
+  width: calc((100% - 30px - $indent) / $item-bookinh);
+  /* outline: 2px solid rgb(255, 218, 71); */
+}
+.item-book--position {
+  padding-left: 100px;
+}
+
+.addresses {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.addresses .item:not(last-child) {
+  margin-bottom: 20px;
+}
+.link__address {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  /* or 167% */
+  letter-spacing: 0.02em;
+}
+.booking__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.addresses__item {
+  width: 200px;
+}
+.link__booking-tel,
+.link__booking-mail {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  /* identical to box height, or 167% */
+  letter-spacing: 0.02em;
+}
+.link__booking-mail {
+  text-decoration-line: underline;
+}
+.link__address,
+.link__booking-tel,
+.link__booking-mail {
+  color: $color-herofooter-text;
+}
+.booking__subtitle {
+  margin-bottom: 20px;
+  color: $color-prime-bacground;
+}

@@ -1,0 +1,75 @@
+/* prices dark */
+.section__prices {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-background-dark;
+  /* for backgrond img */
+  max-width: 1600px;
+  background-image: 
+  // linear-gradient(to right, &color-hero-bcg, &color-hero-bcg),
+    url("../images/PricesBCG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container__prices {
+  display: block;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  /* outline: 2px solid tomato; */
+  & .title-second {
+    margin-top: 20px;
+    margin-bottom: 44px;
+  }
+}
+.price__btn {
+  display: block;
+  margin-top: 44px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prices__lists {
+  display: flex;
+  gap: $indent;
+}
+.price__list {
+  width: 570px;
+  padding: 30px 20px;
+  /* outline: 2px solid tomato; */
+  &:first-child {
+    background-image: linear-gradient(
+      180deg,
+      rgb(23, 26, 36) 0%,
+      rgba(23, 26, 36, 0.2) 100%
+    );
+  }
+  &:last-child {
+    background-image: linear-gradient(
+      180deg,
+      rgb(9, 11, 19) 0%,
+      rgba(9, 11, 19, 0.2) 100%
+    );
+  }
+}
+.price__item {
+  display: flex;
+  align-items: baseline;
+  &::before {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 1px;
+    flex-grow: 1;
+    margin-left: 12px;
+    margin-right: 12px;
+    background: rgba(157, 164, 189, 0.12);
+  }
+  &:not(last-child) {
+    margin-bottom: 20px;
+  }
+}
+.price__span {
+  order: -1;
+}
+/* prices dark*/
